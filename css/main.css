@@ -1,0 +1,57 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v29-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/montserrat-v29-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/montserrat-v29-latin-600.woff2') format('woff2');
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "Montserrat",sans-serif;
+}
+.containers{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero{
+    background-image: url(../images/Car-bacroun-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 500px;
+}
+.hero{
+    @media (max-width:768px){
+        background-image: url(../images/tablet-img.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        height: 500px;
+    }
+}
+.hero{
+    @media (max-width:640px){
+        background-image: url(../images/phone-img.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        height: 500px;
+    }
+}

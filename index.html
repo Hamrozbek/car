@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <link rel="icon" href="./images/logo.svg">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {}
+  </style>
+</head>
+
+<body>
+
+    <header class="py-[27px] md:py-[18px] border-b-[1.5px] border-[#E5E7EA]">
+        <div class="containers flex items-center justify-between">
+            <div data-aos="fade-right" class="flex items-center gap-5">
+                <a href="#">
+                    <img src="./images/logo.svg" alt="Site Logo" width="150" height="40">
+                </a>
+                <nav class="hidden xl:flex items-center">
+                    <a class="hover:text-[#299764] duration-300 py-[18px] px-4 text-[18px] font-medium text-[#000000]"
+                        href="#">Categories</a>
+                    <a class="hover:text-[#299764] duration-300 py-[18px] px-4 text-[18px] font-medium text-[#000000] flex items-center gap-[14px]"
+                        href="#">
+                        <span>About Us</span>
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.15281 0.222116C9.4213 0.409602 9.4213 0.925902 9.15281 1.19439L5.48615 4.86106C5.21766 5.12954 4.78236 5.12954 4.51387 4.86106L0.847203 1.19439C0.578722 0.925902 0.578722 0.409602 0.847203 0.141116C1.11569 -0.0463691 1.55099 -0.0463691 1.81948 0.222116L5.00001 3.40265L8.18054 0.222116C8.44903 -0.0463691 8.88433 -0.0463691 9.15281 0.222116Z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a class="hover:text-[#299764] duration-300 py-[18px] px-4 text-[18px] font-medium text-[#000000] flex items-center gap-[14px]"
+                        href="#">
+                        <span>Help center</span>
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.15281 0.222116C9.4213 0.409602 9.4213 0.925902 9.15281 1.19439L5.48615 4.86106C5.21766 5.12954 4.78236 5.12954 4.51387 4.86106L0.847203 1.19439C0.578722 0.925902 0.578722 0.409602 0.847203 0.141116C1.11569 -0.0463691 1.55099 -0.0463691 1.81948 0.222116L5.00001 3.40265L8.18054 0.222116C8.44903 -0.0463691 8.88433 -0.0463691 9.15281 0.222116Z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+
+            <div data-aos="fade-left" class="flex items-center gap-6" data-aos="fade-left">
+                <a class="hover:text-[#299764] duration-300 hidden md:block text-[16px] text-[#000000] font-semibold"
+                    href="tel:+18554200000">+1 855 420 0000</a>
+                <button
+                    class="hover:bg-[#299764] hover:text-white duration-300 hidden md:flex w-[58px] h-[58px] rounded-full bg-[#F5F5F5] items-center justify-center">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11 3.20825C6.69676 3.20825 3.20831 6.6967 3.20831 10.9999C3.20831 15.3031 6.69676 18.7916 11 18.7916C15.0495 18.7916 18.377 15.7027 18.7558 11.7523C18.7734 11.5684 18.6789 11.3919 18.5162 11.3046C18.3534 11.2173 18.1541 11.2362 18.0107 11.3526C17.2227 11.9921 16.2192 12.3749 15.125 12.3749C12.5937 12.3749 10.5416 10.3229 10.5416 7.79158C10.5416 6.28816 11.265 4.9538 12.3847 4.11728C12.5327 4.00667 12.5999 3.81799 12.555 3.63873C12.51 3.45947 12.3619 3.32472 12.1792 3.29697C11.7944 3.23852 11.4006 3.20825 11 3.20825Z"
+                            fill="currentColor" />
+                    </svg>
+                </button>
+                <button
+                    class="hover:bg-transparent hover:border-[#299764] hover:text-[#299764] duration-300 border-[1.5px] border-transparent hidden md:flex bg-[#299764] text-white rounded-full h-[58px] px-[18px] text-[18px] font-medium flex items-center justify-center">
+                    <span>Login</span>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.3125 17.4166L19.9375 7.79163L10.3125 -2.5e-05L8.9375 1.375L16.2291 8.66663H0V10.9583H16.2291L8.9375 18.25L10.3125 19.625L19.9375 10L10.3125 0.374971L8.9375 1.74997L15.9375 8.74997H0V11.0416H15.9375L8.9375 18.0416L10.3125 19.4166Z"
+                            fill="currentColor" />
+                    </svg>
+                </button>
+                <button class="xl:hidden">
+                    <img src="./images/menu-icon.svg" alt="Menu Icon" width="40" height="20">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pt-5 pb-[133px] px-[20px] md:px-0">
+            <div class="containers relative hero rounded-[20px] !pt-[60px]">
+                <div class="sm:w-[416px] mx-auto text-center">
+                    <h2 class="font-semibold text-[24px] sm:text-[36px] text-white mb-[10px]">Compact cars</h2>
+                    <p class="text-[12px] sm:text-[16px] text-white">Rent cars as you are comfortable and where you are
+                        comfortable.</p>
+                </div>
+                <form
+                    class="md:w-[600px] absolute right-0 left-0 mx-auto bottom-[-35px] shadow-lg rounded-[100px] overflow-hidden"
+                    autocomplete="off" method="get">
+                    <input
+                        class="text-[18px] text-[#000000] h-[58px] px-[22px] focus:shadow-lg focus:shadow-[#299764] duration-300 font-medium outline-none w-full"
+                        type="text" placeholder="Find the car of your dreams" aria-label="Search anything...">
+                    <button
+                        class="border-[1.5px] border-transparent duration-300 hover:border-[#299764] hover:bg-transparent hover:text-[#299764] absolute top-0 bottom-0 right-1 my-auto w-[57px] h-[57px] rounded-full bg-[#299764] text-white flex items-center justify-center"
+                        type="submit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.3851 15.4458C11.7348 17.5685 7.85538 17.4014 5.3986 14.9446C2.76256 12.3086 2.76256 8.0347 5.3986 5.39866C8.03464 2.76262 12.3085 2.76262 14.9445 5.39866C17.4013 7.85544 17.5684 11.7349 15.4457 14.3851L20.6014 19.5408C20.8943 19.8337 20.8943 20.3085 20.6014 20.6014C20.3085 20.8943 19.8336 20.8943 19.5407 20.6014L14.3851 15.4458ZM6.45926 13.8839C4.40901 11.8337 4.40901 8.50957 6.45926 6.45932C8.50951 4.40907 11.8336 4.40907 13.8839 6.45932C15.9326 8.50807 15.9341 11.8288 13.8884 13.8794C13.8869 13.8809 13.8854 13.8824 13.8839 13.8839C13.8824 13.8854 13.8809 13.8869 13.8794 13.8884C11.8288 15.9342 8.50801 15.9327 6.45926 13.8839Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div class="containers">
+                <div class="text-center max-w-[321px] md:max-w-[575px] xl:max-w-[575px] mx-auto">
+                    <h2
+                        class="font-bold text-[24px] md:text-[36px] xl:text-[36px] text-[#000000] pb-[6px] md:pb-[10px] xl:pb-[10px]">
+                        Choose the car of your dreams</h2>
+                    <p
+                        class="font-normal text-[12px] md:text-[16px] xl:tetx-[24px] tetx-[#555555] pb-[30px] xl:pb-[40px]">
+                        We
+                        provide our customers with the most
+                        incredible driving emotions. That is why there are only world-class cars in our fleet</p>
+                </div>
+                <div
+                    class="flex felx-com gap-[14px] md:gap-[16px] xl:gap-[16px] justify-center pb-[16px] md:pb-[24px] xl:pb-[24px]">
+                    <button
+                        class="border-[1.5px] border-transparent duration-300 hover:border-[#299764] hover:bg-transparent hover:text-[#299764] font-medium text-[14px] md:text-[16px] xl:text-[16px] text-[#FFFFFF] bg-[#299764] pl-[20px] pr-[20px] md:pt-[19px] md:pb-[19px] md:pl-[40px] md:pr-[40px] xl:pt-[19px] xl:pb-[19px] xl:pr-[40px] xl:pl-[40px] rounded-[100px]">Compact</button>
+                    <button
+                        class="hover:bg-[#299764] hover:text-white duration-300 font-medium text-[14px] md:tetx-[16px] xl:text-[16px] text-[#000000] border-[1.5px] border-[#E5E7EA] pt-[14px] pb-[14px] pl-[20px] pr-[20px] md:pt-[19px] md:pb-[19px] md:pl-[40px] md:pr-[40px] xl:pt-[19px] xl:pb-[19px] xl:pr-[40px] xl:pl-[40px] rounded-[100px]">
+                        Sports cars</button>
+                    <button
+                        class="hover:bg-[#299764] hover:text-white duration-300 font-medium text-[14px] md:text-[16px] xl:text-[16px] text-[#000000] border-[1.5px] border-[#E5E7EA] pt-[14px] pb-[14px] pl-[20px] pr-[20px] md:pt-[19px] md:pb-[19px] md:pl-[40px] md:pr-[40px] xl:pt-[19px] xl:pb-[19px] xl:pr-[40px] xl:pl-[40px] rounded-[100px]">Vans
+                    </button>
+                </div>
+                <div class="flex gap-[10px] md:gap-[20px] xl:gap-[20px] flex-wrap justify-center pb-[40px]">
+                    <div class="md:max-w-[365px] xl:max-w-[32%] bg-[#F5F5F5] rounded-[16px]">
+                        <h2 class="font-semibold text-[24px] text-[#000000] pb-[8px] pt-[30px] pl-[24px]">Ford Fiesta
+                        </h2>
+                        <p class="font-medium text-[16px] text-[#555555] pb-[16px] pl-[24px]">Economy Car</p>
+                        <img src="./images/Ford-img.png" alt="Ford Fiesta" width="387" height="220">
+                        <div class="flex">
+                            <div>
+                                <div class="flex items-center gap-2 pl-[24px] pb-[24px]">
+                                    <img src="./images/User.svg" alt="User" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">5 Seats</span>
+                                </div>
+                                <div class="flex items-center gap-2 pl-[24px] pb-30px">
+                                    <img src="./images/File-user.svg" alt="automatic" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">21+ Years</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2 pl-[66px] pb-[24px]">
+                                    <img src="./images/automatic.svg" alt="file" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]"> Automatic</span>
+                                </div>
+                                <div class="flex items-center gap-2 pl-[64px] pb-[30px]">
+                                    <img src="./images/oil.svg" alt="oil" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">1-lit / 2.5 km</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:max-w-[365px] xl:max-w-[32%] bg-[#F5F5F5] rounded-[16px]">
+                        <h2 class="font-semibold text-[24px] text-[#000000] pb-[8px] pt-[30px] pl-[24px]">Nissan Versa
+                        </h2>
+                        <p class="font-medium text-[16px] text-[#555555] pb-[16px] pl-[24px]">Compact Car</p>
+                        <img src="./images/nissan.png" alt="Nissan Versa" width="387" height="220">
+                        <div class="flex">
+                            <div>
+                                <div class="flex items-center gap-2 pl-[24px] pb-[24px]">
+                                    <img src="./images/User.svg" alt="User" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">5 Seats</span>
+                                </div>
+                                <div class="flex items-center gap-2 pl-[24px] pb-30px">
+                                    <img src="./images/File-user.svg" alt="automatic" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">21+ Years </span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2 pl-[66px] pb-[24px]">
+                                    <img src="./images/automatic.svg" alt="file" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">Automatic</span>
+                                </div>
+                                <div class="flex items-center gap-2 pl-[64px] pb-[30px]">
+                                    <img src="./images/oil.svg" alt="oil" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">1-lit / 2.5 km</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:max-w-[365px] xl:max-w-[32%] bg-[#F5F5F5] rounded-[16px]">
+                        <h2 class="font-semibold text-[24px] text-[#000000] pb-[8px] pt-[30px] pl-[24px]">Toyota Corolla
+                        </h2>
+                        <p class="font-medium text-[16px] text-[#555555] pb-[16px] pl-[24px]">Mid-size Car</p>
+                        <img src="./images/toyota.png" alt="Ford Fiesta" width="387" height="220">
+                        <div class="flex">
+                            <div>
+                                <div class="flex items-center gap-2 pl-[24px] pb-[24px]">
+                                    <img src="./images/User.svg" alt="User" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">5 Seats</span>
+                                </div>
+                                <div class="flex items-center gap-2 pl-[24px] pb-30px">
+                                    <img src="./images/File-user.svg" alt="automatic" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">21+ Years</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2 pl-[66px] pb-[24px]">
+                                    <img src="./images/automatic.svg" alt="file" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">Automatic</span>
+                                </div>
+                                <div class="flex items-center gap-2 pl-[64px] pb-[30px]">
+                                    <img src="./images/oil.svg" alt="oil" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">1-lit / 2.5 km</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:max-w-[365px] xl:max-w-[32%] bg-[#F5F5F5] rounded-[16px]">
+                        <h2 class="font-semibold text-[24px] text-[#000000] pb-[8px] pt-[30px] pl-[24px]">Nissan Rogue
+                        </h2>
+                        <p class="font-medium text-[16px] text-[#555555] pb-[16px] pl-[24px]">Mid-size SUV</p>
+                        <img src="./images/nissan-dugu.png" alt="Ford Fiesta" width="387" height="220">
+                        <div class="flex">
+                            <div>
+                                <div class="flex items-center gap-2 pl-[24px] pb-[24px]">
+                                    <img src="./images/User.svg" alt="User" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">5 Seats</span>
+                                </div>
+                                <div class="flex items-center gap-2 pl-[24px] pb-30px">
+                                    <img src="./images/File-user.svg" alt="automatic" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">21+ Years</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2 pl-[66px] pb-[24px]">
+                                    <img src="./images/automatic.svg" alt="file" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">Automatic </span>
+                                </div>
+                                <div class="flex items-center gap-2 pl-[64px] pb-[30px]">
+                                    <img src="./images/oil.svg" alt="oil" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">1-lit / 2.5 km</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:max-w-[365px] xl:max-w-[32%] bg-[#F5F5F5] rounded-[16px]">
+                        <h2 class="font-semibold text-[24px] text-[#000000] pb-[8px] pt-[30px] pl-[24px]">Chevy Traverse
+                        </h2>
+                        <p class="font-medium text-[16px] text-[#555555] pb-[16px] pl-[24px]">EFull-size SUV </p>
+                        <img src="./images/chevy.png" alt="Ford Fiesta" width="387" height="220">
+                        <div class="flex">
+                            <div>
+                                <div class="flex items-center gap-2 pl-[24px] pb-[24px]">
+                                    <img src="./images/User.svg" alt="User" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">5 Seats</span>
+                                </div>
+                                <div class="flex items-center gap-2 pl-[24px] pb-30px">
+                                    <img src="./images/File-user.svg" alt="automatic" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">21+ Years</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2 pl-[66px] pb-[24px]">
+                                    <img src="./images/automatic.svg" alt="file" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]"> Automatic</span>
+                                </div>
+                                <div class="flex items-center gap-2 pl-[64px] pb-[30px]">
+                                    <img src="./images/oil.svg" alt="oil" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">1-lit / 2.5 km</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:max-w-[365px] xl:max-w-[32%] bg-[#F5F5F5] rounded-[16px]">
+                        <h2 class="font-semibold text-[24px] text-[#000000] pb-[8px] pt-[30px] pl-[24px]">Nissan Altima
+                        </h2>
+                        <p class="font-medium text-[16px] text-[#555555] pb-[16px] pl-[24px]">Full-size Car</p>
+                        <img src="./images/nissan-altimy.png" alt="Ford Fiesta" width="387" height="220">
+                        <div class="flex">
+                            <div>
+                                <div class="flex items-center gap-2 pl-[24px] pb-[24px]">
+                                    <img src="./images/User.svg" alt="User" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">5 Seats</span>
+                                </div>
+                                <div class="flex items-center gap-2 pl-[24px] pb-30px">
+                                    <img src="./images/File-user.svg" alt="automatic" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">21+ Years</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2 pl-[66px] pb-[24px]">
+                                    <img src="./images/automatic.svg" alt="file" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">Automatic</span>
+                                </div>
+                                <div class="flex items-center gap-2 pl-[64px] pb-[30px]">
+                                    <img src="./images/oil.svg" alt="oil" width="20" height="20">
+                                    <span class="font-medium text-[16px] text-[#000000]">1-lit / 2.5 km</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <button
+                        class="border-[1.5px] border-transparent duration-300 hover:border-[#299764] hover:bg-transparent hover:text-[#299764] font-medium text-[18px] text-[#FFFFFF] bg-[#299764] rounded-[100px] pt-[18px] pb-[18px] pl-[30px] pr-[30px] mb-[100px] md:mb-[160xp] xl:mb-[160px]">View
+                        all cars
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#F5F5F5] pt-[20px] pb-[20px] md:pt-[70px] md:pb-[80px] xl:pt-[70px] xl:pb-[80px]">
+            <div class="containers hidden xl:flex">
+                <div class=" flex flex-col md:flex-row bg-white rounded-[10px]">
+
+                    <div class="pt-[70px] pl-[70px] pb-[70px] pr-[70px]">
+                        <p class="text-[16px] text-[#4285F4] font-medium mb-[16px]">From Google</p>
+                        <h2 class="max-w-[350px] text-[38px] font-medium text-[#000000] mb-[30px] leading-[50px]">Hear
+                            what the community is saying</h2>
+                        <hr class="pt-[30px] text-[#299764]">
+                        <p class="text-[14px] font-medium text-[#555555] mb-[30px]">More interesting reviews on
+                            Instagram</p>
+                        <button
+                            class="px-[50px] py-[18px] border border-[#299764] text-[#299764] rounded-full hover:bg-[#299764] hover:text-[white] transition">Instagram</button>
+                    </div>
+
+                    <div class="flex gap-[20px] bg-[#299764] pt-[50px] pl-[40px] pb-[96px] rounded-xl ">
+
+                        <div class="max-w-[420px] bg-white p-4 rounded-lg ">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <img src="./images/Ava.svg" alt="avatar" class="w-10 h-10 rounded-full" />
+                                <div>
+                                    <h3 class="font-semibold text-[16px] text-[#000000]">Savannah Nguyen</h3>
+                                    <p class="font-normal text-[14px] text-[#555555]">savannahnguyen@gmail.com</p>
+                                </div>
+                                <img src="./images/gogle.svg" alt="Google" class="w-[42px] h-[42px] ml-auto" />
+                            </div>
+                            <p class="text-[14px] text-[#000000] pb-[25px] pt-[14px] leading-[25px]">
+                                Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae arcu ut morbi
+                                bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc
+                                vulputate aliquam sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est
+                                mauris amet. Sed hac vehicula id et dui morbi quam pulvinar condimentum. Senectus sed
+                                varius interdum nunc, arcu vulputate massa.
+                            </p>
+                            <hr class="pt-[24px]">
+                            <div class="flex items-center">
+                                <span class="text-sm text-[#0000000] mr-2">Star rating:</span>
+                                <div class="text-[#299764]">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <div class="max-w-[220px] bg-white p-4 rounded-lg">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <img src="./images/donal.svg" alt="avatar" class="w-10 h-10 rounded-full" />
+                                <div>
+                                    <h3 class="font-semibold text-[16px] text-[#000000]">Ronald Richards</h3>
+                                    <p class="font-normal text-[14px] text-[#555555] ">ronaldrichards@gmail.com</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-2 pb-[90px]">
+                                Placerat pulvinar in amet sem id gravida nisi leo. A dignissim est pellentesque mi
+                                quisque vel mi ut. Porttitor blandit auctor odio a ornare felis tortor bibendum
+                                molestie.
+                            </p>
+                            <hr class="pt-[24px]">
+                            <div class="flex items-center ">
+                                <span class="text-sm text-[#000000] mr-2">Star rating:</span>
+                                <div class="text-green-500">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ----------------------------------------------- -->
+            <!-- tablet -->
+
+            <div class="containers hidden md:flex xl:hidden">
+                <div class="max-w-[794px] md:flex-row bg-white rounded-[10px] mx-auto">
+
+                    <div class=" flex pt-[70px] pl-[70px] pb-[70px] pr-[70px]">
+                        <div>
+                            <p class="text-[16px] text-[#4285F4] font-medium mb-[16px]">From Google</p>
+                            <h2
+                                class="md:max-w-[320px] xl:max-w-[350px] md:text-[24px] xl:text-[38px] font-medium text-[#000000] mb-[30px] md:leading-[36px] xl:leading-[50px]">
+                                Hear what the community is saying</h2>
+                        </div>
+                        <div
+                            class="w-0.5 h-[110px] bg-gradient-to-b from-blue-500 via-green-400 via-yellow-400 via-orange-400 to-red-500 mx-auto top-0">
+                        </div>
+                        <div class="pl-[77px]">
+                            <p class="md:text-[12px] xl:text-[14px] font-medium text-[#555555] mb-[30px]">More
+                                interesting reviews on Instagram</p>
+                            <button
+                                class="px-[50px] py-[18px] border border-[#299764] text-[#299764] rounded-full hover:bg-[#299764] hover:text-[white] transition">Instagram</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex gap-[20px] bg-[#299764] md:pt-[30px] xl:pt-[50px] md:pl-[24px] xl:pl-[40px] pb-[96px] rounded-xl mx-auto">
+
+                        <div class="max-w-[420px] bg-white p-4 rounded-lg ">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <img src="./images/Ava.svg" alt="avatar" class="w-10 h-10 rounded-full" />
+                                <div>
+                                    <h3 class="font-semibold text-[16px] text-[#000000]">Savannah Nguyen</h3>
+                                    <p class="font-normal text-[14px] text-[#555555]">savannahnguyen@gmail.com</p>
+                                </div>
+                                <img src="./images/gogle.svg" alt="Google" class="w-[42px] h-[42px] ml-auto" />
+                            </div>
+                            <p class="text-[14px] text-[#000000] pb-[25px] pt-[14px] leading-[25px]">
+                                Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae arcu ut morbi
+                                bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc
+                                vulputate aliquam sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est
+                                mauris amet. Sed hac vehicula id et dui morbi quam pulvinar condimentum. Senectus sed
+                                varius interdum nunc, arcu vulputate massa.
+                            </p>
+                            <hr class="pt-[24px]">
+                            <div class="flex items-center">
+                                <span class="text-sm text-[#000000] mr-2">Star rating:</span>
+                                <div class="text-[#299764]">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <div class=" max-w-[400px] bg-white p-4 rounded-lg">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <img src="./images/donal.svg" alt="avatar" class="w-10 h-10 rounded-full" />
+                                <div>
+                                    <h3 class="font-semibold text-[16px] text-[#000000]">Ronald Richards</h3>
+                                    <p class="font-normal text-[14px] text-[#555555] ">ronaldrichards@gmail.com</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-2 pb-[130px]">
+                                Placerat pulvinar in amet sem id gravida nisi leo. A dignissim est pellentesque mi
+                                quisque vel mi ut. Porttitor blandit auctor odio a ornare felis tortor bibendum
+                                molestie.
+                            </p>
+                            <hr class="pt-[24px]">
+                            <div class="flex items-center ">
+                                <span class="text-sm text-[#000000] mr-2">Star rating:</span>
+                                <div class="text-[#299764]">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------- -->
+            <!-- phone -->
+
+            <div class="containers flex md:hidden xl:hidden ">
+                <div class=" flex flex-col md:flex-row bg-white rounded-[10px]">
+
+                    <div class="pt-[24px] pl-[20px] pb-[24px] pr-[20px]">
+                        <p class="text-[16px] text-[#4285F4] font-medium mb-[16px]">From Google</p>
+                        <h2 class="max-w-[306px] text-[38px] font-medium text-[#000000] mb-[30px] leading-[50px]">Hear
+                            what the community is saying</h2>
+                        <div
+                            class="h-0.5 w-full bg-gradient-to-r from-red-500 via-yellow-400 via-green-500 to-blue-500 mb-[30px]">
+                        </div>
+                        <p class="text-[14px] font-medium text-[#555555] mb-[30px]">More interesting reviews on
+                            Instagram</p>
+                        <button
+                            class="px-[50px] py-[18px] border border-[#299764] text-[#299764] rounded-full hover:bg-[#299764] hover:text-[white] transition">Instagram</button>
+                    </div>
+
+                    <div class="flex gap-[20px] bg-[#299764] pt-[20px] pl-[16px] pb-[44px] pr-[16px] rounded-xl">
+
+                        <div class="max-w-[420px] bg-white p-4 rounded-lg ">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <img src="./images/Ava.svg" alt="avatar" class="w-10 h-10 rounded-full" />
+                                <div>
+                                    <h3 class="font-semibold text-[16px] text-[#000000]">Savannah Nguyen</h3>
+                                    <p class="font-normal text-[14px] text-[#555555]">savannahnguyen@gmail.com</p>
+                                </div>
+                                <img src="./images/gogle.svg" alt="Google" class="w-[42px] h-[42px] ml-auto" />
+                            </div>
+                            <p class="text-[14px] text-[#000000] pb-[25px] pt-[14px] leading-[25px]">
+                                Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae arcu ut morbi
+                                bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc
+                                vulputate aliquam sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est
+                                mauris amet. Sed hac vehicula id et dui morbi quam pulvinar condimentum. Senectus sed
+                                varius interdum nunc, arcu vulputate massa.
+                            </p>
+                            <hr class="pt-[24px]">
+                            <div class="flex items-center">
+                                <span class="text-sm text-[#000000] mr-2">Star rating:</span>
+                                <div class="text-[#299764]">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <section>
+            <div class="containers">
+                <h2
+                    class="font-medium text-[20px] md:text-[24px] xl:text-[24px] text-[#000000] pb-[34px] pt-[100px] md:pt-[160px] xl:pt-[160px] md:pl-[20px]">
+                    More than 50 brands
+                    of cars</h2>
+                <div class="flex hidden md:flex xl:flex md:gap-[40px] xl:gap-[66px] pb-[100px] md:pb-[160px] xl:pb-[160px] md:pl-[20px]">
+                    <img class="w-[100px] xl:w-[140px]" src="./images/ford.svg" alt="ford" width="`140" height="40">
+                    <img class="w-[100px] xl:w-[140px]" src="./images/nissan.svg" alt="nissan" width="140" height="40">
+                    <img class="w-[100px] xl:w-[140px]" src="./images/toyota.svg" alt="toyota" width="140" height="40">
+                    <img class="w-[100px] xl:w-[140px]" src="./images/dodge.svg" alt="dodge" width="140" height="40">
+                    <img class="w-[100px] xl:w-[140px]" src="./images/hyundai.svg" alt="hyundai" width="140"
+                        height="40">
+                    <img class="w-[100px] xl:w-[140px]" src="./images/jeep.svg" alt="jeep" width="140" height="40">
+                </div>
+                <div class="flex md:hidden xl:hidden pb-[100px] gap-[20px]">
+                    <img class="w-[100px]" src="./images/ford.svg" alt="ford" width="140" height="40">
+                    <img class="w-[100px]" src="./images/nissan.svg" alt="nissan" width="140" height="40">
+                    <img class="w-[100px]" src="./images/toyota.svg" alt="toyota" width="140" height="40">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="containers">
+                <div class="max-w-[684px] text-center mx-auto">
+                    <h2
+                        class="font-semibold text-[24px] md:text-[36px] xl:text-[36px] text-[#000000] pb-[6px]  md:pb-[20px] xl:pb-[10px]">
+                        Unparalleled service</h2>
+                    <p class="font-normal text-[12px] md:text-[16px] xl:text-[16px] text-[#555555] pb-[40px] ">Whether
+                        you are looking for Newark
+                        Airport car rental, an insurance replacement vehicle or minivan to take on vacation Car rental
+                        has it all.</p>
+                </div>
+                <div class="flex gap-[20px] flex-wrap justify-center pb-[160px]">
+                    <div class="md:max-w-[387px] xl:max-w-[590px] bg-[#F5F5F5] rounded-[20px]">
+                        <div class="flex md:gap-[49px] xl:gap-[104px]">
+                            <div>
+                                <h2
+                                    class="max-w-[350px] font-medium text-[28px] xl:text-[32px] text-[#000000] pb-[10px] pt-[40px] pl-[32px]">
+                                    Book online, pay online</h2>
+                                <p
+                                    class="max-w-[350px] font-normal text:[14px] xl:text-[16px] tetx-[#555555] pl-[32px] pb-[40px]">
+                                    Complete the booking process A-Z, with our easy online system</p>
+                            </div>
+                            <div class="pt-[40px] pr-[40px]">
+                                <img src="./images/Desktop.svg" alt="dasktop" width="60" height="60">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" md:max-w-[387px] xl:max-w-[590px] bg-[#F5F5F5] rounded-[20px]">
+                        <div class="flex md:gap-[49px] xl:gap-[104px]">
+                            <div>
+                                <h2
+                                    class="max-w-[350px] font-medium text-[28px] xl:text-[32px] text-[#000000] pb-[10px] pt-[40px] pl-[32px]">
+                                    Guaranteed car reservation</h2>
+                                <p
+                                    class="max-w-[350px] font-normal text:[14px] xl:text-[16px] tetx-[#555555] pl-[32px] pb-[40px]">
+                                    When you book with Car rental, you can be confident your car will be waiting for you
+                                </p>
+                            </div>
+                            <div class="pt-[40px] pr-[40px]">
+                                <img src="./images/Shield.svg" alt="dasktop" width="60" height="60">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" md:max-w-[387px] xl:max-w-[590px] bg-[#F5F5F5] rounded-[20px]">
+                        <div class="flex md:gap-[49px] xl:gap-[104px]">
+                            <div>
+                                <h2
+                                    class="max-w-[350px] font-medium text-[28px] xl:text-[32px] text-[#000000] pb-[10px] pt-[40px] pl-[32px]">
+                                    Unparalleled customer service</h2>
+                                <p
+                                    class="max-w-[350px] font-normal text:[14px] xl:text-[16px] tetx-[#555555] pl-[32px] pb-[40px]">
+                                    We're here to help. We pride ourselves in our customer service</p>
+                            </div>
+                            <div class="pt-[40px] pr-[40px]">
+                                <img src="./images/User-clock.svg" alt="dasktop" width="60" height="60">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:max-w-[387px] xl:max-w-[590px] bg-[#F5F5F5] rounded-[20px]">
+                        <div class="flex md:gap-[49px] xl:gap-[104px]">
+                            <div>
+                                <h2
+                                    class="max-w-[350px] font-medium text-[28px] xl:text-[32px] text-[#000000] pb-[10px] pt-[40px] pl-[32px]">
+                                    No reservation or booking fees</h2>
+                                <p
+                                    class="max-w-[350px] font-normal text:[14px] xl:text-[16px] tetx-[#555555] pl-[32px] pb-[40px]">
+                                    No cancellation fees if cancelled 24 hours prior to booking time</p>
+                            </div>
+                            <div class="pt-[40px] pr-[40px]">
+                                <img src="./images/Wallet.svg" alt="dasktop" width="60" height="60">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        tailwind.config = {
+            theme: {
+                extend: {}
+            }
+        };
+    </script>
+</body>
+
+</html>
